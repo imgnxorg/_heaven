@@ -1,7 +1,8 @@
 "use client";
 
+import React from "react";
 import mermaid from "mermaid";
-import MDXContent from "./markdown.mdx"; // Import the MDX content
+import MermaidMDXContent from "./mermaid.mdx"; // Import the MDX content
 import { useEffect } from "react";
 
 const App = () => {
@@ -15,12 +16,12 @@ const App = () => {
         htmlLabels: true,
       },
     });
-mermaid.contentLoaded();
+    mermaid.contentLoaded();
   }, []);
 
   return (
     <div>
-      <MDXContent />
+      <MermaidMDXContent />
       <pre>From App.js</pre>
     </div>
   );

@@ -1,24 +1,29 @@
+"use server";
+
 import React from "react";
 import { createRoot } from "react-dom/client";
-import App from "./app.js";
 import "./styles.css";
 
-favorites = ["paypal"];
+const App = () => import("./app.js");
 
 (async () => {
   // SSR
+  const favorites = ["paypal"];
+  try {
+    const meta = favorites.map(async (site) => {
+      if (!site.includes(".")) site = site + ".com";
+      return await getMetaDescription(site);
+    });
 
-  const meta = await favorites.map(async (site) => {
-    if (!site.includes(".")) site = site + ".com";
-    return await getMetaDescription(site);
-  });
-
-  console.log(meta);
+    console.log(meta);
+  } catch (err) {
+    console.error(err);
+  }
 })();
 
 async function getMetaDescription(url) {
   try {
-    const response = await fetch(url);
+    const response = await fetch(`https://${url}`);
 
     const html = await response.text();
 

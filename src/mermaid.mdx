@@ -1,14 +1,4 @@
-import React from "react";
-import { MDXProvider } from "@mdx-js/react";
-import remarkMermaid from "remark-mermaidjs";
-
-const components = {};
-
-export default ({ children }) => (
-  <MDXProvider components={components} remarkPlugins={[remarkMermaid]}>
-    {children}
-  </MDXProvider>
-);
+import Mermaid from 'mdx-mermaid';
 
 # Heaven of the mind...
 
@@ -35,3 +25,19 @@ Useful Links:
    - [insert preview here] https://www.youtube.com/watch?v=48emqztKl7s&t=94s
 
 5. Special files https://gist.github.com/jakebrinkmann/c63eaedbe384516e4a7bc133c1e1066b
+
+# Mermaid.js Example
+
+<Mermaid
+  chart={`gantt
+    title Logarithmic Time Scale Example
+    dateFormat  YYYY-MM-DD
+    axisFormat  %b %d
+    section Events
+    Event 1  :done,    e1, 2024-01-01, 1d
+    Event 2  :active,  e2, 2024-01-02, 2d
+    Event 3  :         e3, 2024-01-04, 4d
+    Event 4  :         e4, 2024-01-08, 8d
+    Event 5  :         e5, 2024-01-16, 16d
+`}
+/>

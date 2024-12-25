@@ -7,6 +7,7 @@
   <title>Heaven</title>
   <link id="favicon" rel="icon"
     href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛅️</text></svg>" />
+
   <style>
     @font-face {
       font-family: "Clean";
@@ -52,19 +53,19 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="./styles.css" />
   <link rel="stylesheet" href="./bulma-theme.css" />
-  <link rel="alternate" href="rss.xml" type="application/rss+xml" title="RSS" />
-  <link rel="alternate" href="atom.xml" type="application/atom+xml" title="Atom" />
+  <!-- <link rel="alternate" href="rss.xml" type="application/rss+xml" title="RSS" /> -->
+  <!-- <link rel="alternate" href="atom.xml" type="application/atom+xml" title="Atom" /> -->
 
   <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /> -->
   <link rel="import" href="component.html" />
   <!-- <link rel="import" href="component.html" /> -->
-  <link rel="manifest" href="manifest.json" />
-  <link rel="stylesheet" href="print.css" media="print" />
+  <!-- <link rel="manifest" href="manifest.json" /> -->
+  <!-- <link rel="stylesheet" href="print.css" media="print" /> -->
   <!-- <link rel="apple-touch-icon" href="favicon.png" /> -->
   <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
   <!-- <script src="./imgnxstat.js"></script> -->
   <!-- <script src="https://cdn.jsdelivr.net/wp/plugins/wp-slimstat/tags/4.6.5/wp-slimstat.js"></script> -->
-  <script src="https://cdn.jsdelivr.net/wp/themes/twenty-eightteen/1.7/assets/js/html5.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/wp/themes/twenty-eightteen/1.7/assets/js/html5.js"></script> -->
 
   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/wp/themes/twenty-eightteen/1.7/style.css" /> -->
   <style>
@@ -124,31 +125,7 @@
         </details>
       </menu>
     </nav>
-    <!-- prettier-ignore -->
-    <div class="col-span-6 mermaid" id="mermaid-chart">
-      <!-- prettier-ignore -->
-      gantt
-      <!-- prettier-ignore -->
-      title Logarithmic Time Scale Example
-      <!-- prettier-ignore -->
-      dateFormat YYYY-MM-DD
-      <!-- prettier-ignore -->
-      axisFormat %b %d
-      <!-- prettier-ignore -->
-      section Events
-      <!-- prettier-ignore -->
-      Event 1 : done, e1, 2024-01-01, 1d
-      <!-- prettier-ignore -->
-      Event 2 : active, e2, 2024-01-02, 2d
-      <!-- prettier-ignore -->
-      Event 3 : e3, 2024-01-04, 4d
-      <!-- prettier-ignore -->
-      Event 4 : e4, 2024-01-08, 8d
-      <!-- prettier-ignore -->
-      Event 5 : e5, 2024-01-16, 16d
-    </div>
-
-
+    <div id="root"></div>
     <div class="col-span-6">
       <h2 class="text-3xl clean mb-3">Quicklinks</h2>
       <ul class="grid grid-cols-6 gap-4">
@@ -204,7 +181,7 @@
       <div class="grid grid-cols-3 gap-4">
         <div class="border bg-white shadow rounded p-6 text-center">
           <div class="text-2xl clean mb-2">PayPal</div>
-          <img class="inline-block mb-2" role="icon" src="https://paypal.com/favicon.ico" />
+          <img class="inline-block mb-2" role="icon" src="../cdn/npm.png" />
           <details>
             <summary class="rounded">paypal.com</summary>
             <blockquote
@@ -249,7 +226,7 @@
       </div>
     </div>
   </div>
-  <div id="root"></div>
+  <script src="../cdn/bundle.js"></script>
 </body>
 
 </html>
