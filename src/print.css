@@ -1,0 +1,60 @@
+/* print.css */
+
+/* General styles for the printed document */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 12pt;
+  color: #000;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove unnecessary elements */
+header,
+footer,
+nav,
+aside {
+  display: none;
+}
+
+/* Ensure all links are printed in full */
+a:link:after,
+a:visited:after {
+  content: " (" attr(href) ")";
+}
+
+/* Style for page breaks */
+@media print {
+  .page-break {
+    page-break-before: always;
+  }
+}
+
+/* Ensure images are printed correctly */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #000;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Hide elements with the class 'no-print' */
+.no-print {
+  display: none;
+}
+
+.page-break-after {
+  page-break-after: always;
+}

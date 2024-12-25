@@ -2,6 +2,8 @@
 import path from "path";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import CopyWebpackPlugin from "copy-webpack-plugin";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -17,8 +19,7 @@ export default {
   output: {
     path: path.resolve(__dirname, "dist"), // Output directory
     filename: "bundle.js", // Output file name
-    publicPath: "/cdn/", // CDN path or public directory
-    // Specify the location of the index.html file
+    publicPath: "./cdn/", // Updated to relative path
   },
   module: {
     rules: [
@@ -57,13 +58,48 @@ export default {
           },
         ],
       },
+      {
+        test: /\.mmd$/,
+        use: [
+          {
+            loader: "raw-loader",
+          },
+        ],
+      },
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: "css-loader",
+          },
+        ],
+      },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/index.html", // Path to your template file
+      filename: "index.html", // Output file name
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: "cdn", to: "cdn" }, // Copy contents of /cdn to /dist/cdn
+      ],
+  }), 
+  ],
   resolve: {
     extensions: [".js", ".jsx"],
     fallback: {
       fs: false,
       path: false,
     },
+  },
+  stats: {
+    colors: true,
+  },
+  devServer: {
+    contentBase: path.join(__dirname, "dist"),
+    compress: true,
+    port: 9000,
   },
 };

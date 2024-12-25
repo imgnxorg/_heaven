@@ -1,25 +1,18 @@
-import mermaid from "mermaid";
 import React from "react";
-import ReactDOM from "react-dom";
-import MDXContent from "./markdown.mdx"; // Import the MDX content
-
-mermaid.initialize({
-  startOnLoad: true,
-  theme: "default",
-  securityLevel: "loose",
-  flowchart: {
-    useMaxWidth: true,
-    htmlLabels: true,
-  },
-});
+import { createRoot } from "react-dom/client";
+import App from "./app.js";
+import "./styles.css";
 
 favorites = ["paypal"];
 
 (async () => {
+  // SSR
+
   const meta = await favorites.map(async (site) => {
     if (!site.includes(".")) site = site + ".com";
     return await getMetaDescription(site);
   });
+
   console.log(meta);
 })();
 
@@ -43,10 +36,6 @@ async function getMetaDescription(url) {
   }
 }
 
-const App = () => (
-  <div>
-    <MDXContent />
-  </div>
-);
+const root = createRoot(document.getElementById("root"));
 
-ReactDOM.render(<App />, document.getElementById("root"));  
+root.render(<App />);

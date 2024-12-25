@@ -1,0 +1,27 @@
+{
+  "name": "Heaven",
+  "version": "1.0.0",
+  "description": "It's all of the mind...",
+  "manifest_version": 2,
+  "assets": {
+    "main.js": "bundle.js",
+    "styles.css": "style.css"
+  },
+  "permissions": ["storage", "notifications"],
+  "icons": {
+    "16": "cdn/npm.png",
+    "48": "cdn/npm.png",
+    "128": "cdn/npm.png"
+  },
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Donald Wayne Moore Jr.",
+  "license": "0BSD"
+}

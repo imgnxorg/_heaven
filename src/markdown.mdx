@@ -2,9 +2,7 @@ import React from "react";
 import { MDXProvider } from "@mdx-js/react";
 import remarkMermaid from "remark-mermaidjs";
 
-const components = {
-// Add custom components here if needed
-};
+const components = {};
 
 export default ({ children }) => (
   <MDXProvider components={components} remarkPlugins={[remarkMermaid]}>
