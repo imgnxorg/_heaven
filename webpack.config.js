@@ -19,7 +19,7 @@ export default {
   output: {
     path: path.resolve(__dirname, "dist"), // Output directory
     filename: "bundle.js", // Output file name
-    publicPath: "./cdn/", // Updated to relative path
+    publicPath: "/", // Use root-relative path
   },
   module: {
     rules: [
@@ -68,11 +68,7 @@ export default {
       },
       {
         test: /\.css$/,
-        use: [
-          {
-            loader: "css-loader",
-          },
-        ],
+        use: ["style-loader", "css-loader"],
       },
     ],
   },
@@ -83,9 +79,9 @@ export default {
     }),
     new CopyWebpackPlugin({
       patterns: [
-        { from: "cdn", to: "cdn" }, // Copy contents of /cdn to /dist/cdn
+        { from: "public", to: "public" }, // Copy contents of /public to /dist/public
       ],
-  }), 
+    }),
   ],
   resolve: {
     extensions: [".js", ".jsx"],
@@ -98,8 +94,13 @@ export default {
     colors: true,
   },
   devServer: {
-    contentBase: path.join(__dirname, "dist"),
+    static: {
+      directory: path.join(__dirname, "dist"),
+    },
+    hot: true,
+    liveReload: true,
     compress: true,
-    port: 9000,
+    port: 3000,
+    historyApiFallback: true,
   },
 };

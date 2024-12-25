@@ -1,26 +1,10 @@
-"use client";
-
-import mermaid from "mermaid";
-import MDXContent from "./markdown.mdx"; // Import the MDX content
-import { useEffect } from "react";
+import React from "react";
+import MDX from "./components/mdx.js"; // Import the MDX content
 
 const App = () => {
-  useEffect(() => {
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: "default",
-      securityLevel: "loose",
-      flowchart: {
-        useMaxWidth: true,
-        htmlLabels: true,
-      },
-    });
-mermaid.contentLoaded();
-  }, []);
-
   return (
     <div>
-      <MDXContent />
+      <MDX />
       <pre>From App.js</pre>
     </div>
   );
