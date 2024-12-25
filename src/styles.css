@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "Space Mono";
+  src: url("/Users/donaldmoore/Library/Fonts/SpaceMono-Regular.ttf");
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: subpixel-antialiased;
+}

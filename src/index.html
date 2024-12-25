@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heaven</title>
+  <link id="favicon" rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'></text></svg>" />
+  <style>
+    @font-face {
+      font-family: "Clean";
+      src: url("https://use.typekit.net/af/a9f5e6/000000000000000000017708/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff2"),
+        url("https://use.typekit.net/af/a9f5e6/000000000000000000017708/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("woff"),
+        url("https://use.typekit.net/af/a9f5e6/000000000000000000017708/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3") format("opentype");
+      font-display: swap;
+      font-style: inherit;
+      font-weight: 700;
+    }
+
+    .clean {
+      font-family: "Clean", sans-serif;
+    }
+
+    .debug {
+      outline: 4px dashed yellowgreen;
+      outline-color: hsla(120, 100%, 50%, 0.5);
+    }
+
+    .debug *:nth-child(odd) {
+      outline: 1px dashed hsla(0, 100%, 50%, 0.5);
+    }
+
+    .debug *:nth-child(even) {
+      outline: 1px dashed hsla(240, 100%, 50%, 0.5);
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./index.js"></script>
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./bulma-theme.css" />
+  <link rel="alternate" href="rss.xml" type="application/rss+xml" title="RSS" />
+  <link rel="alternate" href="atom.xml" type="application/atom+xml" title="Atom" />
+
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="import" href="component.html" />
+  <link rel="import" href="component.html" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="print.css" media="print" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <!-- <script src="./imgnxstat.js"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/wp/plugins/wp-slimstat/tags/4.6.5/wp-slimstat.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/wp/themes/twenty-eightteen/1.7/assets/js/html5.js"></script>
+
+  <style>
+    .debug {
+      outline: 4px solid black;
+    }
+
+    .debug *:nth-child(even) {
+      outline: 1px dashed blue;
+    }
+
+    .debug *:nth-child(odd) {
+      outline: 1px dashed red;
+    }
+  </style>
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/wp/themes/twenty-eightteen/1.7/style.css" /> -->
+  <style>
+    text {
+      font-family: 'Clean', sans-serif !important;
+    }
+  </style>
+</head>
+
+<body class="bg-zinc-50">
+  <div class="mb-12">
+
+    <h1 class="text-6xl text-center clean mb-6">Heaven</h1>
+    <small class="w-full inline-block text-center italic">The battlefield... the chaos...</small>
+
+  </div>
+  <div class="container mx-auto m-6 p-6 grid grid-cols-6 gap-4">
+    <nav class="col-span-6">
+      <menu class="mb-12 grid grid-cols-6">
+        <details>
+          <summary>
+            It&apos;s
+          </summary>
+          <form onsubmit="event.preventDefault(); " action="">
+            <fieldset class="flex flex-col">
+              <label>
+                <input checked type="radio" name="de-la-cabeza" value="verdado" />
+                of the mind.
+              </label>
+              <label>
+                <input type="radio" name="de-la-cabeza"
+                  onchange="event.target.value === 'falso' ? document.querySelector('iframe').click() : document.querySelector('iframe').pause()" />
+                all in your head
+
+              </label>
+            </fieldset>
+          </form>
+        </details>
+        <details>
+          <summary>Koans &amp; 🧪 Testing</summary>
+          <ul>
+            <li class="border bg-white shadow rounded p-6 text-center">
+              <a class="text-[#007bff] hover:underline hover:text-[rebeccapurple]" target="_blank"
+                href="https://github.com/mrdavidlaing/javascript-koans">Learn
+                more about koans and how you can test software.
+              </a>
+            </li>
+          </ul>
+        </details>
+      </menu>
+    </nav>
+    <!-- prettier-ignore -->
+    <div class="col-span-6 mermaid">
+      gantt
+      title Logarithmic Time Scale Example
+      dateFormat YYYY-MM-DD
+      axisFormat %b %d
+      section Events
+      Event 1 :done, e1, 2024-01-01, 1d
+      Event 2 :active, e2, 2024-01-02, 2d
+      Event 3 : e3, 2024-01-04, 4d
+      Event 4 : e4, 2024-01-08, 8d
+      Event 5 : e5, 2024-01-16, 16d
+
+    </div>
+
+
+
+    <div class="col-span-6">
+      <h2 class="text-3xl clean mb-3">Quicklinks</h2>
+      <ul class="grid grid-cols-6 gap-4">
+        <li class="border bg-white shadow rounded p-6 text-center"><a
+            class="text-[#007bff] hover:underline hover:text-[rebeccapurple]" href="chrome://inspect"
+            target="_blank">Chrome Inspector</a></li>
+        <li class="border bg-white shadow rounded p-6 text-center"><a
+            class="text-[#007bff] hover:underline hover:text-[rebeccapurple]"
+            href="https://themes.svn.wordpress.org">WordPress Themes</a>*</li>
+        <li class="border bg-white shadow rounded p-6 text-center"><a
+            class="text-[#007bff] hover:underline hover:text-[rebeccapurple]" href="https://jsdelivr.com">JS
+            Delivr</a></li>
+        <li class="border bg-white shadow rounded p-6 text-center"><a
+            class="text-[#007bff] hover:underline hover:text-[rebeccapurple]"
+            href="https://github.dev/github/dev">GitHub REPL</a></li>
+        <li class="border bg-white shadow rounded p-6 text-center"><a
+            class="text-[#007bff] hover:underline hover:text-[rebeccapurple]"
+            href="https://git-scm.com/book/ms/v2/Customizing-Git-Git-Hooks">Git Hooks</a></li>
+        <li class="border bg-white shadow rounded p-6 text-center"><a
+            class="text-[#007bff] hover:underline hover:text-[rebeccapurple]" href="https://pages.github.com/">GitHub
+            Pages</a></li>
+        <li class="border bg-white shadow rounded p-6 text-center"><a
+            class="text-[#007bff] hover:underline hover:text-[rebeccapurple]"
+            href="https://code.visualstudio.com/docs/getstarted/tips-and-tricks#vscode">VS Code Tips and Tricks</a>
+        </li>
+        <li class="border bg-white shadow rounded p-6 text-center"><a
+            class="text-[#007bff] hover:underline hover:text-[rebeccapurple]"
+            href="https://www.npmjs.com/settings/imgnx/packages">IMGNX on NPM</a></li>
+        <li class="border bg-white shadow rounded p-6 text-center"><a
+            class="text-[#007bff] hover:underline hover:text-[rebeccapurple]"
+            href="https://console.cloud.google.com/storage/browser/">Google Cloud Storage</a></li>
+      </ul>
+      <div class="mt-6">
+        <small>* Use them (and even resell them) for free!</small>
+
+      </div>
+    </div>
+
+    <div class="col-span-3">
+      <h2 class="text-3xl clean mb-3">Fintech</h2>
+      <div class="grid grid-cols-3 gap-4">
+        <div class="border bg-white shadow rounded p-6 text-center">
+          <div class="text-2xl clean mb-2">PayPal</div>
+          <img class="inline-block mb-2" role="icon" src="https://paypal.com/favicon.ico" />
+          <details>
+            <summary class="rounded">paypal.com</summary>
+            <blockquote
+              class="p-2 bg-zinc-100 border-l border-t border-zinc-400 mt-4 italic text-zinc-700 rounded text-sm">
+              From paying friends to saving money or getting cash back when you shop, explore what the new PayPal app
+              has to offer.
+            </blockquote>
+          </details>
+
+        </div>
+
+      </div>
+
+    </div>
+    <div class="col-span-3">
+      <h2 class="text-3xl clean mb-3">Locally Sourced</h2>
+      <div class="grid grid-cols-3 gap-4">
+        <div class="border bg-white shadow rounded p-6 text-center">
+          <div class="text-2xl clean mb-2">HCM</div>
+          <img class="inline-block mb-2" role="icon" src="./npm.png" />
+          <details>
+            <summary>
+              <code>Todo</code>
+            </summary>
+            <blockquote
+              class="p-2 bg-zinc-100 border-l border-t border-zinc-400 mt-4 italic text-zinc-700 rounded text-sm">
+              Get this with a DocBooks -style XML parser (or a crawler/scraper) or
+              something...
+            </blockquote>
+          </details>
+        </div>
+      </div>
+    </div>
+    <div class="col-span-6">
+      <h2 class="text-3xl clean mb-3">More Products</h2>
+
+      <div class="grid grid-cols-6 gap-4">
+        <a href="https://producthunt.com/">
+          <div class="border bg-white shadow rounded p-6 text-center">
+            <div class="text-2xl clean mb-2">ProductHunt</div>
+            <img class="inline-block mb-2" role="icon" src="https://producthunt.com/favicon.ico" />
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+  <div id="root"></div>
+  <script src="dist/bundle.js"></script> <!-- Include the bundled JavaScript -->
+</body>
+
+</html>
